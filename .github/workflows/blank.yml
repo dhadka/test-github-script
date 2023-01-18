@@ -13,8 +13,7 @@ jobs:
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         script: |
-          if (context.workflow != "foo") {
-            console.log("Not 'triage' workflow")
+          if (context.workflow != "Actions Linux") {
+            console.log("Only posting reminder comment from 'Actions Linux' workflow. Skipping.")
             return
           }
-          console.log(context.workflow)
