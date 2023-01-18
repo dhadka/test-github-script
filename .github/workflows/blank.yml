@@ -12,10 +12,11 @@ jobs:
       uses: actions/github-script@v6
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
+        debug: true
         script: |
           if (context.workflow != "Actions Linux") {
             console.log("Only posting reminder comment from 'Actions Linux' workflow. Skipping.")
             return
           }
-
-          console.log("foo")
+          
+          const footer = "Thank you for your patience before we fully deprecate using Azure Pipelines in CI."
