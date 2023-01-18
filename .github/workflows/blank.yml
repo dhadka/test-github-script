@@ -14,7 +14,7 @@ jobs:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         script: |
           if (context.workflow != "foo") {
-            console.log("Not triage workflow")
+            console.log("Not 'triage' workflow")
             return
           }
           console.log(context.workflow)
