@@ -17,3 +17,5 @@ jobs:
             console.log("Only posting reminder comment from 'Actions Linux' workflow. Skipping.")
             return
           }
+          
+          console.log("foo")
